@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>School Projects</title>
+
+<style>
+:root{
+  --bg:#f6f1ee;
+  --panel:#ffffff;
+
+  --text-main:#1c1c1c;
+  --text-muted:#6b6b6b;
+
+  --accent:#b35c44;
+
+  --card-border: rgba(0,0,0,0.08);
+  --radius:12px;
+  --gutter:20px;
+}
+*{box-sizing:border-box}
+
+html,body{
+  height:100%;
+  margin:0;
+  background:var(--bg);
+  color:var(--text-main);
+  font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+}
+
+a{color:var(--accent);text-decoration:none}
+img{max-width:100%;display:block}
+header{
+  background:var(--panel);
+  border-bottom:1px solid var(--card-border);
+  padding:28px 16px;
+}
+
+.wrap{
+  max-width:1100px;
+  margin:0 auto;
+  padding:0 18px;
+}
+
+.brand{
+  display:flex;
+  gap:14px;
+  align-items:center;
+}
+
+.logo{
+  width:56px;
+  height:56px;
+  border-radius:8px;
+  background-size:cover;
+  background-position:center;
+}
+
+header h1{margin:0;font-size:20px}
+header p{margin:2px 0 0;font-size:13px;color:var(--text-muted)}
+
+.top-links{margin-left:auto}
+
+.btn{
+  padding:8px 14px;
+  border-radius:8px;
+  border:1px solid var(--card-border);
+  background:#fff;
+  font-size:13px;
+  color:var(--text-main);
+}
+
+.btn.primary{
+  background:var(--accent);
+  color:#fff;
+  border:none;
+}
+.hero{
+  margin:28px 0 24px;
+  padding:28px;
+  border-radius:14px;
+  background:var(--panel);
+  border:1px solid var(--card-border);
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+.hero p{color:var(--text-muted)}
+
+.pixel-grid{
+  width:100%;
+  height:6px;
+  background:linear-gradient(
+    90deg,
+    transparent 0 10px,
+    rgba(0,0,0,0.06) 10px 11px
+  ) repeat-x;
+  margin-top:10px;
+  border-radius:2px;
+}
+.tabs{
+  display:flex;
+  gap:10px;
+  margin-bottom:14px;
+  flex-wrap:wrap;
+}
+
+.tab{
+  padding:8px 14px;
+  border-radius:10px;
+  border:1px solid var(--card-border);
+  background:#fff;
+  color:var(--text-muted);
+  cursor:pointer;
+  font-size:13px;
+}
+
+.tab.active{
+  color:#fff;
+  background:var(--accent);
+  border-color:var(--accent);
+}
+.projects{
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+  margin-top:18px;
+}
+
+.card{
+  display:flex;
+  gap:18px;
+  background:var(--panel);
+  border:1px solid var(--card-border);
+  padding:16px;
+  border-radius:12px;
+}
+
+.thumb{
+  width:140px;
+  aspect-ratio:16 / 9;
+  height:auto;
+  border-radius:8px;
+  background-size:cover;
+  background-position:center;
+  border:1px solid var(--card-border);
+}
+
+.card h3{
+  margin:0 0 6px;
+  font-size:16px;
+}
+
+.card p{
+  margin:0 0 12px;
+  color:var(--text-muted);
+  font-size:14px;
+}
+
+.links{display:flex;gap:10px;flex-wrap:wrap}
+
+.link-btn{
+  padding:8px 12px;
+  border-radius:8px;
+  border:1px solid var(--card-border);
+  background:#fff;
+  font-size:13px;
+  color:var(--text-main);
+}
+footer{
+  margin:48px 0 80px;
+  text-align:center;
+  font-size:13px;
+  color:var(--text-muted);
+}
+
+@media (max-width:760px){
+  .card{flex-direction:column}
+  .thumb{width:100%;height:auto;aspect-ratio:16/9}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="wrap" style="display:flex;align-items:center">
+    <div class="brand">
+      <div class="logo" style="background-image:url('./icons/project_icon.png')"></div>
+      <div>
+        <h1>Projects</h1>
+        <p>Sources for the images and information gathered can be found here!</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+<section class="hero">
+  <input
+    id="searchInput"
+    placeholder="Find Sources..."
+    style="width:100%;padding:12px;border-radius:10px;border:1px solid var(--card-border);font-size:14px;"
+  >
+
+  <div class="tabs">
+    <button class="tab active" data-tab="all">All</button>
+    <button class="tab" data-tab="subject_enrichment">Subject Enrichment Activity</button>
+    <button class="tab" data-tab="transdisciplinary">Transdisciplinary Project</button>
+  </div>
+
+  <p>Grade: IX (A) | Enrollment id: 5825</p>
+  <div class="pixel-grid"></div>
+</section>
+
+<section id="projects" class="projects">
+
+<article class="card" data-category="subject_enrichment">
+  <div class="thumb" style="background-image:url('./icons/card.sera/satellite_cyclone.png')"></div>
+  <div>
+    <h3>Satellite Image of a Cyclone</h3>
+    <p>Satellite Image of a Cyclone over Madagascar from NASA</p>
+    <div class="links">
+      <a class="link-btn" href="https://www.earthdata.nasa.gov/news/worldview-image-archive/tropical-cyclone-freddy-over-madagascar-again" target="_blank">Go to Source</a>
+    </div>
+  </div>
+</article>
+
+<article class="card" data-category="subject_enrichment">
+  <div class="thumb" style="background-image:url('./icons/card.sera/cyclone_amphan.png')"></div>
+  <div>
+    <h3>Cyclone Amphan</h3>
+    <p>Information & Images about Cyclone Amphan in wiki</p>
+    <div class="links">
+      <a class="link-btn" href="https://en.wikipedia.org/wiki/Cyclone_Amphan" target="_blank">Go to Source</a>
+    </div>
+  </div>
+</article>
+
+<article class="card" data-category="subject_enrichment">
+  <div class="thumb" style="background-image:url('./icons/card.sera/cyclone_impact.png')"></div>
+  <div>
+    <h3>Impact of Cyclones</h3>
+    <p>Image of Land Destroyed by Cyclones</p>
+    <div class="links">
+      <a class="link-btn" href="https://www.encyclopedie-environnement.org/en/air-en/tropical-cyclones-impacts-and-risks-2/" target="_blank">Go to Source</a>
+    </div>
+  </div>
+</article>
+
+<article class="card" data-category="subject_enrichment">
+  <div class="thumb" style="background-image:url('./icons/card.sera/disaster_management.png')"></div>
+  <div>
+    <h3>About Disaster Management</h3>
+    <p>Disaster Management Cycle ensures safety of Citizens</p>
+    <div class="links">
+      <a class="link-btn" href="https://www.researchgate.net/figure/The-tropical-cyclone-disaster-management-cycle-adapted-from-Khan-2008_fig1_318231775" target="_blank">Go to Source</a>
+    </div>
+  </div>
+</article>
+
+<article class="card" data-category="transdisciplinary">
+  <div class="thumb" style="background-image:url('./icons/card.tdp/map-of-bastar.png')"></div>
+  <div>
+    <h3>Map of Bastar</h3>
+    <p>Bastar is a district in the state of Chhattisgarh in Central India</p>
+    <div class="links">
+      <a class="link-btn" href="https://www.mapsofindia.com/maps/chhattisgarh/districts/bastar.htm" target="_blank">Go to Source</a>
+    </div>
+  </div>
+</article>
+
+<article class="card" data-category="transdisciplinary">
+  <div class="thumb" style="background-image:url('./icons/card.tdp/forest_deciduos.png')"></div>
+  <div>
+    <h3>Tropical Deciduos Forests</h3>
+    <p>A Type of Forest (1)</p>
+    <div class="links">
+      <a class="link-btn" href="https://avianreport.com/tropical-deciduous-forests/" target="_blank">Go to Source</a>
+    </div>
+  </div>
+</article>
+
+<article class="card" data-category="transdisciplinary">
+  <div class="thumb" style="background-image:url('./icons/card.tdp/forest_tropical_evergreen.png')"></div>
+  <div>
+    <h3>Tropical Evergreen Forests</h3>
+    <p>A Type of Forest (2)</p>
+    <div class="links">
+      <a class="link-btn" href="https://ecovegetation.com/tropical-evergreen-forest-virtual-tour/" target="_blank">Go to Source</a>
+    </div>
+  </div>
+</article>
+
+<article class="card" data-category="transdisciplinary">
+  <div class="thumb" style="background-image:url('./icons/card.tdp/additional_sources.png')"></div>
+  <div>
+    <h3>Other Sources</h3>
+    <p>Additional Sources Used for the Transdisciplinary Project</p>
+    <div class="links">
+      <a class="link-btn" href="https://www.britannica.com/" target="_blank">Britannica</a>
+      <a class="link-btn" href="https://www.nationalgeographic.org" target="_blank">National Geographic</a>
+      <a class="link-btn" href="https://www.worldwildlife.org/" target="_blank">World Wild Life</a>
+      <a class="link-btn" href="https://ncert.nic.in" target="_blank">NCERT</a>
+    </div>
+  </div>
+</article>
+
+</section>
+</main>
+
+<footer>
+  <p>Coded & Deployed by FelineGames</p>
+</footer>
+
+<script>
+const searchInput = document.getElementById("searchInput");
+const cards = document.querySelectorAll(".card");
+const tabs = document.querySelectorAll(".tab");
+let activeCategory = "all";
+
+function filterCards(){
+  const text = searchInput.value.toLowerCase();
+  cards.forEach(card=>{
+    const matchText = card.textContent.toLowerCase().includes(text);
+    const matchTab = activeCategory==="all" || card.dataset.category===activeCategory;
+    card.style.display = (matchText && matchTab) ? "flex" : "none";
+  });
+}
+
+searchInput.addEventListener("input", filterCards);
+
+tabs.forEach(tab=>{
+  tab.addEventListener("click",()=>{
+    tabs.forEach(t=>t.classList.remove("active"));
+    tab.classList.add("active");
+    activeCategory = tab.dataset.tab;
+    filterCards();
+  });
+});
+</script>
+
+</body>
+</html>
